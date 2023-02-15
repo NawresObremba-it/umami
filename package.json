@@ -10,6 +10,8 @@
     "url": "https://github.com/umami-software/umami.git"
   },
   "scripts": {
+    "build": "babel src -d lib",
+    "prebuild": "jest",
     "dev": "next dev",
     "build": "npm-run-all build-db check-db build-tracker build-geo build-app",
     "start": "next start",
@@ -139,11 +141,4 @@
   "cacheDirectories": [
     ".next/cache"
   ]
-}
-{
-  "name": "my-package",
-  "scripts": {
-    "build": "babel src -d lib",
-    "test": "jest"
-  }
 }
